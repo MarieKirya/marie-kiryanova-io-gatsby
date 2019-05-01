@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
             className="navbar-item"
             to="/"
           >
-            {siteTitle}
+            > mk_
           </Link>
 
           <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarPortfolio">
