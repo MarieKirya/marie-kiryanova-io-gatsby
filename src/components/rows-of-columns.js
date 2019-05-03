@@ -18,7 +18,7 @@ const classesForColumns = {
 }
 
 const RowsOfColumns = (props) => (
-  <div>
+  <div style={props.style}>
     { splitEvery(props.data, props.columns).map(row => (
       <div className="columns">
         { row.map(col => (

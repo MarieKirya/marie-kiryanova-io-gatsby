@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Marie Kiryanova <marie@kiryanova.io>",
   "dependencies": {
+    "@mdi/font": "^3.6.95",
     "bulma": "^0.7.4",
     "gatsby": "^2.3.33",
     "gatsby-image": "^2.0.40",

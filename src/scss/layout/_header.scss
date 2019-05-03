@@ -1,3 +1,16 @@
+header nav.navbar {
+  background-color: #274d99;
+
+  a.navbar-item {
+    color: seashell;
+
+    &:focus,
+    &:hover {
+      background-color: #4161a2;
+    }
+  }
+}
+
 header div.navbar-brand a {
   font-family: 'Inconsolata', monospace;
 }

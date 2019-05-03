@@ -3,9 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata|Lato:400,400i,700,900');
 
 @import "../../node_modules/bulma/bulma";
+@import "../../node_modules/@mdi/font/css/materialdesignicons.min.css";
 
 @import "global/variables";
 @import "global/typography";
+@import "layout/layout";
 @import "layout/header";
 @import "components/cards";
 @import "components/job";
