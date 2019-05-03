@@ -1,0 +1,23 @@
+div.job {
+  margin-bottom: 50px;
+}
+
+div.job article.media {
+  margin-bottom: 20px;
+}
+
+div.job figure.media-left img {
+  border-radius: 10px;
+}
+
+div.job div.media-content {
+  overflow: hidden;
+}
+
+div.job h3.job-title {
+  color: $color-medium-grey;
+}
+
+div.job h4 {
+  margin-bottom: 1rem;
+}

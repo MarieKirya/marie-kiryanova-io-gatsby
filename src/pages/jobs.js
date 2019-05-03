@@ -5,27 +5,70 @@ import ReactMarkdown from "react-markdown"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Job from "../components/content/job"
 
 const JobsPage = ({data}) => (
   <Layout>
     <SEO title="Jobs" keywords={[`marie`, `kiryanova`, 'Jobs', `react`, `gatsby`, `drupal`, `portfolio`]} />
     <h1 className="title">Jobs</h1>
-    { data.allNodeJobs.edges.map((job, index) => {
-      return (
-        <article className="project">
-          <h2 class="title">{job.node.title}</h2>
-        </article>
-      );
-    })}
+    { data.allNodeJobs.edges.map((job, index) => ( <Job node={job.node} /> )) }
   </Layout>
 )
 
 export const query = graphql`
   query JobsPageQuery {
-    allNodeJobs {
+    allNodeJobs (
+      sort: {
+        fields: field_job_end
+        order: DESC
+      }
+    ) {
       edges {
         node {
-          title
+          title,
+          field_title,
+          body {
+            value
+          }
+          field_job_beginning(formatString: "MMMM, YYYY"),
+          field_job_end(formatString: "MMMM, YYYY"),
+          field_current_job,
+          relationships {
+            field_logo {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 512, maxHeight: 512) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+            field_projects  {
+              title,
+              field_date,
+              field_link {
+                title
+                uri
+              }
+              body {
+                value
+              }
+              relationships {
+                field_technologies {
+                  name
+                }
+                field_logo {
+                  localFile {
+                    childImageSharp {
+                      fluid(maxWidth: 512, maxHeight: 512) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
