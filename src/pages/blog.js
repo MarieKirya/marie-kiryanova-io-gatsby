@@ -10,26 +10,28 @@ import RowsOfColums from "../components/rows-of-columns.js"
 
 const BlogPage = ({data}) => (
   <Layout>
-    <SEO title="Blog" keywords={[`marie`, `kiryanova`, 'blog', `react`, `gatsby`, `drupal`, `portfolio`]} />
-    <h1 className="title">Blog</h1>
+    <div className={"container"}>
+      <SEO title="Blog" keywords={[`marie`, `kiryanova`, 'blog', `react`, `gatsby`, `drupal`, `portfolio`]} />
+      <h1 className="title">Blog</h1>
 
-    <RowsOfColums columns={2} data={data.allNodeBlogPost.edges} 
-      render={ data => (
-        <Link to={data.node.path.alias}>
-          <div className="blog-teaser card">
-            <div class="card-image">
-              <Img fluid={data.node.relationships.field_hero_image.localFile.childImageSharp.fluid} />
-            </div>
-            <div class="card-content">
-              <h2>{data.node.title}</h2>
-              <span>{data.node.created}</span>
-              <div class="content">
-                <ReactMarkdown source={data.node.body.summary} />
+      <RowsOfColums columns={2} data={data.allNodeBlogPost.edges}
+        render={ data => (
+          <Link to={data.node.path.alias}>
+            <div className="blog-teaser card">
+              <div class="card-image">
+                <Img fluid={data.node.relationships.field_hero_image.localFile.childImageSharp.fluid} />
+              </div>
+              <div class="card-content">
+                <h2>{data.node.title}</h2>
+                <span>{data.node.created}</span>
+                <div class="content">
+                  <ReactMarkdown source={data.node.body.summary} />
+                </div>
               </div>
             </div>
-          </div>
-        </Link>
-    )}/>
+          </Link>
+      )}/>
+    </div>
   </Layout>
 )
 

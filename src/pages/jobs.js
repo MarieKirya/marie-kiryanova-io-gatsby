@@ -9,9 +9,11 @@ import Job from "../components/content/job"
 
 const JobsPage = ({data}) => (
   <Layout>
-    <SEO title="Jobs" keywords={[`marie`, `kiryanova`, 'Jobs', `react`, `gatsby`, `drupal`, `portfolio`]} />
-    <h1 className="title">Jobs</h1>
-    { data.allNodeJobs.edges.map((job, index) => ( <Job node={job.node} /> )) }
+    <div className={"container"}>
+      <SEO title="Jobs" keywords={[`marie`, `kiryanova`, 'Jobs', `react`, `gatsby`, `drupal`, `portfolio`]} />
+      <h1 className="title">Jobs</h1>
+      { data.allNodeJobs.edges.map((job, index) => ( <Job node={job.node} /> )) }
+    </div>
   </Layout>
 )
 

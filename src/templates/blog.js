@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 
 const BlogTemplate = ({ data }) => (
   <Layout>
-    <div>
+    <div className={"container"}>
       <h1 className="title">{data.nodeBlogPost.title}</h1>
 
       <div class="content">

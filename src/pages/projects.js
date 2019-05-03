@@ -8,12 +8,14 @@ import ProjectCard from "../components/content/project-card.js"
 
 const ProjectsPage = ({data}) => (
   <Layout>
-    <SEO title="Projects" keywords={[`marie`, `kiryanova`, 'projects', `react`, `gatsby`, `drupal`, `portfolio`]} />
-    <h1 className="title">Projects</h1>
+    <div className={"container"}>
+      <SEO title="Projects" keywords={[`marie`, `kiryanova`, 'projects', `react`, `gatsby`, `drupal`, `portfolio`]} />
+      <h1 className="title">Projects</h1>
 
-    <RowsOfColums columns={3} 
-                  data={data.allNodeProject.edges} 
-                  render={ data => <ProjectCard node={data.node}/> }/>
+      <RowsOfColums columns={3}
+                    data={data.allNodeProject.edges}
+                    render={ data => <ProjectCard node={data.node}/> }/>
+    </div>
   </Layout>
 )
 

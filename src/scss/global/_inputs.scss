@@ -1,0 +1,12 @@
+input.input,
+textarea.textarea {
+  background: white;
+  border-radius: 25px;
+  border: 1px #28a9e0 solid;
+  box-shadow: none;
+  padding: 20px;
+
+  &::placeholder {
+    color: #28a9e0;
+  }
+}

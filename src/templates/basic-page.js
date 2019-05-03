@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 
 const BasicPageTemplate = ({ data }) => (
   <Layout>
-    <div>
+    <div className={"container"}>
       <h1 className="title">{data.nodeBasicPage.title}</h1>
 
       <div class="content">
