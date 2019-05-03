@@ -7,21 +7,21 @@ const ProjectCard = (props) => (
     <div class="card-image">
       <Img fluid={props.node.relationships.field_logo.localFile.childImageSharp.fluid} />
     </div>
-    <div class="card-content">
-      <div class="content">
-        <h2>{props.node.title}</h2>
-        <ReactMarkdown source={props.node.body.value} />
-        <div class="tags">
+    <div class="card-content content">
+      <h2>{props.node.title}</h2>
+      <ReactMarkdown source={props.node.body.value} />
+      <div class="spacer"/>
+      <div className="link">
+        <a href={props.node.field_link.uri}>See {props.node.field_link.title}</a>
+      </div>
+      <div class="tags">
           { props.node.relationships.field_technologies.map(tech => (
             <span class="tag">{tech.name}</span>
           ))}
-        </div>
-        <div>
-          <a href={props.node.field_link.uri}>See {props.node.field_link.title}</a>
-        </div>
       </div>
     </div>
   </div>
+  
 )
 
 export default ProjectCard 

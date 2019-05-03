@@ -1,7 +1,8 @@
 div.card {
-  border-radius: 20px;
-  box-shadow: 0 0 20px -8px rgba(10, 10, 10, 0.7);
+  height: 100%;
 
+  border-radius: 20px;
+  box-shadow: 0 0 30px -15px rgba(10, 10, 10, 0.7);
   transition: transform .2s; 
   transition-timing-function: ease;
 
@@ -13,5 +14,25 @@ div.card {
   &:hover,
   &:focus {
     transform: scale(1.02);
+  }
+}
+
+.project.card {
+  display: flex;
+  flex-direction: column;
+
+  div.link {
+    margin-bottom: 1em;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    .spacer {
+      flex-grow: 1;
+    }
   }
 }
