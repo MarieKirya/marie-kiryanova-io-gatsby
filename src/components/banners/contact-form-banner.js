@@ -39,7 +39,7 @@ const ContactFormBanner = () => (
 
           <div className="field">
             <div className="control">
-              <button className="button is-link">Submit</button>
+              <button className="button button--cta inversed is-link">Submit</button>
             </div>
           </div>
 

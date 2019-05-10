@@ -1,0 +1,33 @@
+.banner--decoupled {
+  background-color: $color-purple;
+  color: $color-almost-white;
+
+  padding: 20px 0;
+
+  h2,
+  h3,
+  a,
+  span {
+    text-align: center;
+  }
+
+  h3 {
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tech-icon {
+    margin: 0 25%;
+  }
+
+  .mdi {
+    margin-right: 5px;
+  }
+
+  .button {
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 200px;
+  }
+}

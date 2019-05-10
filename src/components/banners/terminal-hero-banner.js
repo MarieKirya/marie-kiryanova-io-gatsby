@@ -15,7 +15,6 @@ const TerminalHeroBanner = () => (
         </div>
         <div className={"column column--ctas"}>
           <Link to={'/projects'} className="button button--cta"><span className="mdi mdi-source-branch"/> Projects</Link>
-          <Link to={'/blog'} className="button button--cta"><span className="mdi mdi-pen"/> Blog</Link>
           <a href={'https://github.com/mariekirya'} className="button button--cta"><span className="mdi mdi-github-circle"/> GitHub</a>
         </div>
       </div>

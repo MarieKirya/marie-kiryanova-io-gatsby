@@ -8,10 +8,15 @@
 @import "global/variables";
 @import "global/typography";
 @import "global/inputs";
+
 @import "layout/layout";
 @import "layout/header";
+
 @import "components/cards";
 @import "components/job";
-@import "components/terminal-hero";
 @import "components/home-page";
-@import "components/contact-form";
+
+@import "components/banners/terminal-hero";
+@import "components/banners/open-source";
+@import "components/banners/contact-form";
+@import "components/banners/blog";

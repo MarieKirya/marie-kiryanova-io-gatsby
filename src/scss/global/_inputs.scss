@@ -1,12 +1,64 @@
 input.input,
 textarea.textarea {
-  background: white;
+  background: $color-almost-white;
   border-radius: 25px;
-  border: 1px #28a9e0 solid;
+  border: 3px $color-blue solid;
   box-shadow: none;
   padding: 20px;
+  resize: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    border: 3px $color-deep-blue solid;
+  }
 
   &::placeholder {
-    color: #28a9e0;
+    color: $color-blue;
+  }
+}
+
+.button--cta {
+  display: flex;
+
+  margin: 10px 25%;
+
+  border: 0 none;
+  border-radius: 40px;
+
+  font-size: 1.3em;
+  font-weight: 700;
+
+  background-color: $color-almost-white;
+  color: $color-blue;
+
+  @media (min-width: $tablet) {
+    margin: 0px 25%;
+  }
+
+  transition: transform .2s;
+  transition-timing-function: ease;
+
+  &:hover,
+  &:focus {
+    color: $color-deep-blue;
+    transform: scale(1.02);
+  }
+
+  span.mdi {
+    position: absolute;
+
+    left: 20px;
+  }
+}
+
+.button--cta.inversed {
+  background-color: $color-blue;
+  color: $color-almost-white;
+
+  &:hover,
+  &:focus {
+    background-color: $color-deep-blue;
+    color: $color-almost-white;
   }
 }
