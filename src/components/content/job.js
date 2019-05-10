@@ -3,7 +3,7 @@ import ReactMarkdown from "react-markdown"
 import Img from "gatsby-image"
 
 import ProjectCard from "./project-card"
-import RowsOfColums from "../rows-of-columns.js"
+import RowsOfColums from "../utils/rows-of-columns.js"
 
 
 class Job extends React.Component {

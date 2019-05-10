@@ -1,9 +1,9 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import RowsOfColums from "../components/rows-of-columns.js"
+import Layout from "../components/layout/layout"
+import SEO from "../components/utils/seo"
+import RowsOfColums from "../components/utils/rows-of-columns.js"
 import ProjectCard from "../components/content/project-card.js"
 
 const ProjectsPage = ({data}) => (

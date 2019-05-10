@@ -1,10 +1,10 @@
 const path = require(`path`)
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
-  const basicPagesTemplate = path.resolve(`src/templates/basic-page.js`)
-  const blogTemplate = path.resolve(`src/templates/blog.js`)
+  const basicPagesTemplate = path.resolve(`src/templates/basic-page.js`);
+  const blogTemplate = path.resolve(`src/templates/blog.js`);
 
   // Query for recipe nodes to use in creating pages.
   return graphql(
@@ -58,4 +58,4 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
   })
-}
+};

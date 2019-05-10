@@ -1,8 +1,7 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="container">
@@ -14,11 +13,11 @@ const Header = ({ siteTitle }) => (
             > mk_
           </Link>
 
-          <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarPortfolio">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+          <div role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarPortfolio">
+            <span aria-hidden="true"/>
+            <span aria-hidden="true"/>
+            <span aria-hidden="true"/>
+          </div>
         </div>
 
         <div className="navbar-menu">
@@ -45,13 +44,5 @@ const Header = ({ siteTitle }) => (
     </nav>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

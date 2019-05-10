@@ -1,9 +1,8 @@
 import { graphql } from "gatsby"
 import React from "react"
 import ReactMarkdown from "react-markdown"
-import Img from "gatsby-image"
 
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 
 const BlogTemplate = ({ data }) => (
   <Layout>
