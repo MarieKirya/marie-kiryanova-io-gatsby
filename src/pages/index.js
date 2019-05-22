@@ -10,7 +10,15 @@ import FOSSBanner from "../components/banners/foss-banner"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`marie`, `kiryanova`, `react`, `gatsby`, `drupal`, `portfolio`]} />
-    <TerminalHero/>
+    <TerminalHero commands={[
+      'composer require drupal/core',
+      'vagrant up',
+      'gatsby new project-name',
+      'git commit -m "Initial commit."',
+      'make',
+      'ssh marie@client.net',
+      'drush cr'
+    ]}/>
     <BlogBanner/>
     <FOSSBanner/>
     <ContactFormBanner/>

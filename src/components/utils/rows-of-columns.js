@@ -19,10 +19,10 @@ const classesForColumns = {
 
 const RowsOfColumns = (props) => (
   <div style={props.style}>
-    { splitEvery(props.data, props.columns).map(row => (
-      <div className="columns">
-        { row.map(col => (
-            <div className={"column " + classesForColumns[props.columns]}>
+    { splitEvery(props.data, props.columns).map((row, rowIndex) => (
+      <div key={rowIndex} className="columns">
+        { row.map((col, colIndex) => (
+            <div key={colIndex} className={"column " + classesForColumns[props.columns]}>
               { props.render(col) }
             </div>
           )) }

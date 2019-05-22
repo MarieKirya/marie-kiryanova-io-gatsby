@@ -4,8 +4,6 @@ import Img from "gatsby-image"
 
 import ProjectCard from "./project-card"
 import RowsOfColums from "../utils/rows-of-columns.js"
-import {Link} from "gatsby";
-
 
 class Job extends React.Component {
   constructor() {
