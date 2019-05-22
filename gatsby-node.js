@@ -1,7 +1,25 @@
 const path = require(`path`)
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+
+  createRedirect({
+    fromPath: "https://www.kiryanova.io/*",
+    toPath: "https://marie.kiryanova.io/:splat",
+    statusCode: 301
+  });
+
+  createRedirect({
+    fromPath: "https://kiryanova.io/*",
+    toPath: "https://marie.kiryanova.io/:splat",
+    statusCode: 301
+  });
+
+  createRedirect({
+    fromPath: "https://marie-kiryanova-io-gatsby.netlify.com/*",
+    toPath: "https://marie.kiryanova.io/:splat",
+    statusCode: 301
+  });
 
   const basicPagesTemplate = path.resolve(`src/templates/basic-page.js`);
   const blogTemplate = path.resolve(`src/templates/blog.js`);
