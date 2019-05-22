@@ -11,7 +11,7 @@ div.job article.media {
   }
 }
 
-div.job .content {
+div.job > .content {
   @media (min-width: $tablet) {
     margin-left: 10%;
     margin-right: 10%;
