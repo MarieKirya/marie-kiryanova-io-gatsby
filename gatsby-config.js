@@ -6,6 +6,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-130717060-2",
+      },
+    },
     `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
