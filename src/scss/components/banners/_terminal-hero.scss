@@ -27,15 +27,16 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 0 2rem;
     margin: 0rem 1rem 1rem 1rem;
+    min-height: 9rem;
 
     background-color: #353332;
 
     @media (min-width: $tablet) {
       border-radius: 20px 20px 0px 0px;
 
-      padding: 2rem 2rem 6rem 2rem;
+      padding: 2rem 2rem 0 2rem;
       margin: 1.5rem 1rem 0 1rem;
 
       transition: padding .2s, margin .2s;
