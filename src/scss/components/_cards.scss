@@ -37,3 +37,17 @@ div.card {
     }
   }
 }
+
+.blog-hero.card {
+  .gatsby-image-wrapper {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  margin-bottom: 2rem;
+}
