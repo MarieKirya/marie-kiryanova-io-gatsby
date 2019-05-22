@@ -1,0 +1,5 @@
+# Domain Alias Redirects.
+
+https://www.kiryanova.io/* https://marie.kiryanova.io/:splat 301!
+https://kiryanova.io/* https://marie.kiryanova.io/:splat 301!
+https://marie-kiryanova-io-gatsby.netlify.com/* https://marie.kiryanova.io/:splat 301!
