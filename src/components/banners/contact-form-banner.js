@@ -8,6 +8,9 @@ const ContactFormBanner = () => (
 
           <h2>Contact Me</h2>
           <form action="/submission" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="bot-field" />
+            <input type="hidden" name="form-name" value="contact" />
+            
             <div className={"columns"}>
               <div className={"column"}>
                 <div className="field">
