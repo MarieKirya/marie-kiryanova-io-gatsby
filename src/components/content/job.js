@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 
 import ProjectCard from "./project-card"
 import RowsOfColums from "../utils/rows-of-columns.js"
+import {Link} from "gatsby";
 
 
 class Job extends React.Component {
@@ -47,11 +48,11 @@ class Job extends React.Component {
             <ReactMarkdown source={this.props.node.body.value} />
           </div>
 
-          <h4 style={ shown } onClick={this.toggle.bind(this)}>
-            <span class="mdi mdi-plus"/> Projects
+          <h4 className="button button--cta inversed" style={ shown } onClick={this.toggle.bind(this)}>
+            <span class="mdi mdi-wrench"/> Show Projects
           </h4>
-          <h4 style={ hidden } onClick={this.toggle.bind(this)}>
-            <span class="mdi mdi-minus"/> Projects
+          <h4 className="button button--cta inversed" style={ hidden } onClick={this.toggle.bind(this)}>
+            <span class="mdi mdi-wrench"/> Hide Projects
           </h4>
 
           <RowsOfColums  style={ hidden } columns={3} 

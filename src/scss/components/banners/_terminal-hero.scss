@@ -49,7 +49,8 @@
     }
   }
 
-  .terminal-line {
+  .terminal-line,
+  .terminal-line span {
     font-family: 'Inconsolata', monospace;
     color: #c7c7c7;
   }

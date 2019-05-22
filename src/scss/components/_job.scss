@@ -4,6 +4,18 @@ div.job {
 
 div.job article.media {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+div.job .content {
+  @media (min-width: $tablet) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 
 div.job figure.media-left img {

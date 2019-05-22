@@ -1,5 +1,14 @@
 header nav.navbar {
-  background-color: #274d99;
+  background-color: $color-deep-blue;
+
+  .navbar-burger span {
+    color: seashell;
+  }
+
+  .navbar-menu {
+    background-color: $color-deep-blue;
+    box-shadow: none;
+  }
 
   a.navbar-item {
     color: seashell;

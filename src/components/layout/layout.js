@@ -13,11 +13,11 @@ import Footer from "./footer"
 import "../../css/main.css"
 
 const Layout = ({ children }) => (
-    <>
+    <div className={"layout"}>
       <Header/>
       <main>{children}</main>
       <Footer/>
-    </>
+    </div>
 );
 
 Layout.propTypes = {

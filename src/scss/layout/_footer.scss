@@ -1,0 +1,18 @@
+.page-footer .container {
+  display: flex;
+  flex-direction: row-reverse;
+
+  border-top: 1px $color-blue solid;
+  padding: 1rem;
+  margin-top: 2rem;
+
+  .copyright {
+    flex-grow: 1;
+    padding: 5px 0;
+    color: $color-blue;
+  }
+
+  .mdi {
+    padding: 0 1rem;
+  }
+}

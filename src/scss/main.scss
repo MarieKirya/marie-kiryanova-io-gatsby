@@ -11,6 +11,7 @@
 
 @import "layout/layout";
 @import "layout/header";
+@import "layout/footer";
 
 @import "components/cards";
 @import "components/job";
@@ -20,3 +21,5 @@
 @import "components/banners/open-source";
 @import "components/banners/contact-form";
 @import "components/banners/blog";
+
+@import "pages/submission";
