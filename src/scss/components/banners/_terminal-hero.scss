@@ -39,12 +39,12 @@
       padding: 2rem 2rem 0 2rem;
       margin: 1.5rem 1rem 0 1rem;
 
-      transition: padding .2s, margin .2s;
+      transition: min-height .2s, margin .2s;
       transition-timing-function: ease;
 
       &:hover,
       &:focus {
-        padding: 2rem 2rem 6.5rem 2rem;
+        min-height: 9.5rem;
         margin: 1rem 1rem 0 1rem;
       }
     }
