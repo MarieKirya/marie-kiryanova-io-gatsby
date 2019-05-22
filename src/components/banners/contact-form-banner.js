@@ -7,7 +7,7 @@ const ContactFormBanner = () => (
         <div className={"column is-half  is-offset-one-quarter "}>
 
           <h2>Contact Me</h2>
-          <form name="contact" method="POST" data-netlify="true">
+          <form action="/submission" name="contact" method="POST" data-netlify="true">
             <div className={"columns"}>
               <div className={"column"}>
                 <div className="field">
