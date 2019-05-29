@@ -3,9 +3,12 @@ import React from "react"
 import ReactMarkdown from "react-markdown"
 
 import Layout from "../components/layout/layout"
+import SEO from "../components/utils/seo";
 
 const BasicPageTemplate = ({ data }) => (
   <Layout>
+    <SEO title={data.nodeBasicPage.title} keywords={[`marie`, `kiryanova`, 'blog', `react`, `gatsby`, `drupal`, `portfolio`]} />
+
     <div className={"container"}>
       <h1 className="title">{data.nodeBasicPage.title}</h1>
 

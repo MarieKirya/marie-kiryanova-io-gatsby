@@ -4,9 +4,12 @@ import ReactMarkdown from "react-markdown"
 
 import Layout from "../components/layout/layout"
 import Img from "gatsby-image";
+import SEO from "../components/utils/seo";
 
 const BlogTemplate = ({ data }) => (
   <Layout>
+    <SEO title={data.nodeBlogPost.title} keywords={[`marie`, `kiryanova`, 'blog', `react`, `gatsby`, `drupal`, `portfolio`]} />
+
     <div className={"container blog-post"}>
       <h1 className="title">{data.nodeBlogPost.title}</h1>
       <span className="author-date">By Marie Kiryanova — Posted on {data.nodeBlogPost.created}</span>
