@@ -3,6 +3,7 @@ module.exports = {
     title: `Marie Kiryanova`,
     description: `See my past jobs, clients, projects, and thoughts.`,
     author: `Marie Kiryanova <marie@kiryanova.io>`,
+    siteUrl: `https://marie.kiryanova.io`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,6 +40,18 @@ module.exports = {
       options: {
         baseUrl: `https://cms.kiryanova.io/`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        exclude: [
+          `/dev-404-page`,
+          `/404`,
+          `/404.html`,
+          `/submission`,
+          `/easter-egg`
+        ]
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
