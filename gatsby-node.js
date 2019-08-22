@@ -6,19 +6,22 @@ exports.createPages = ({ actions, graphql }) => {
   createRedirect({
     fromPath: "https://www.kiryanova.io/*",
     toPath: "https://marie.kiryanova.io/:splat",
-    statusCode: 301
+    statusCode: '301',
+    force: true
   });
 
   createRedirect({
     fromPath: "https://kiryanova.io/*",
     toPath: "https://marie.kiryanova.io/:splat",
-    statusCode: 301
+    statusCode: '301',
+    force: true
   });
 
   createRedirect({
     fromPath: "https://marie-kiryanova-io-gatsby.netlify.com/*",
     toPath: "https://marie.kiryanova.io/:splat",
-    statusCode: 301
+    statusCode: '301',
+    force: true
   });
 
   const basicPagesTemplate = path.resolve(`src/templates/basic-page.js`);
