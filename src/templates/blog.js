@@ -6,6 +6,19 @@ import Layout from "../components/layout/layout"
 import Img from "gatsby-image";
 import SEO from "../components/utils/seo";
 
+const HeadingRenderer = (props) => {
+  const flatten = (text, child) => {
+    return typeof child === 'string'
+    ? text + child
+    : React.Children.toArray(child.props.children).reduce(flatten, text)
+  }
+
+  let children = React.Children.toArray(props.children)
+  let text = children.reduce(flatten, '')
+  let slug = text.toLowerCase().replace(/\W/g, '-')
+  return React.createElement('h' + props.level, {id: slug}, props.children)
+}
+
 const BlogTemplate = ({ data }) => (
   <Layout>
     <SEO title={data.nodeBlogPost.title} keywords={[`marie`, `kiryanova`, 'blog', `react`, `gatsby`, `drupal`, `portfolio`]} />
@@ -21,7 +34,7 @@ const BlogTemplate = ({ data }) => (
       </div>
 
       <div class="content">
-        <ReactMarkdown source={data.nodeBlogPost.body.value} />
+        <ReactMarkdown source={data.nodeBlogPost.body.value} renderers={{heading: HeadingRenderer}} />
       </div>
     </div>
   </Layout>
