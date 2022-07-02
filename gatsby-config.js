@@ -38,7 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `http://192.168.1.2:8083/`,
+        baseUrl: `https://cms-marie.n-n.moe/`,
+        skipFileDownloads: true,
       },
     },
     {
