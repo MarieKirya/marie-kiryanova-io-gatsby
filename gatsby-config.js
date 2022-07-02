@@ -39,7 +39,6 @@ module.exports = {
       resolve: `gatsby-source-drupal`,
       options: {
         baseUrl: `https://cms-marie.n-n.moe/`,
-        skipFileDownloads: true,
       },
     },
     {
