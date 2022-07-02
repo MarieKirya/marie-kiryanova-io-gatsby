@@ -45,6 +45,7 @@ const Job = ({node}) => {
           columns={3} 
           data={node.relationships.field_projects} 
           render={ data => <ProjectCard node={data}/> }
+          rowClassName={'is-justify-content-center'}
         />
       }
     </div>

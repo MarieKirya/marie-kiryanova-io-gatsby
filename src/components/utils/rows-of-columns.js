@@ -17,13 +17,19 @@ const classesForColumns = {
   5: "is-one-fifth",
 }
 
-const RowsOfColumns = (props) => (
-  <div style={props.style}>
-    { splitEvery(props.data, props.columns).map((row, rowIndex) => (
-      <div key={rowIndex} className="columns">
+const RowsOfColumns = ({
+    style,
+    data,
+    columns,
+    render,
+    rowClassName = ''
+}) => (
+  <div style={style}>
+    { splitEvery(data, columns).map((row, rowIndex) => (
+      <div key={rowIndex} className={`columns ${rowClassName}`}>
         { row.map((col, colIndex) => (
-            <div key={colIndex} className={"column " + classesForColumns[props.columns]}>
-              { props.render(col) }
+            <div key={colIndex} className={"column " + classesForColumns[columns]}>
+              { render(col) }
             </div>
           )) }
       </div>
