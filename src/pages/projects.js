@@ -2,14 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout/layout"
-import SEO from "../components/utils/seo"
+import Seo from "../components/utils/seo"
 import RowsOfColums from "../components/utils/rows-of-columns.js"
 import ProjectCard from "../components/content/project-card.js"
 
 const ProjectsPage = ({data}) => (
   <Layout>
     <div className={"container"}>
-      <SEO title="Projects" keywords={[`marie`, `kiryanova`, 'projects', `react`, `gatsby`, `drupal`, `portfolio`]} />
+      <Seo title="Projects" keywords={[`marie`, `kiryanova`, 'projects', `react`, `gatsby`, `drupal`, `portfolio`]} />
       <h1 className="title">Projects</h1>
 
       <RowsOfColums columns={3}
@@ -46,9 +46,10 @@ export const query = graphql`
             field_logo {
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 512, maxHeight: 512) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(
+                    layout: FULL_WIDTH
+                    aspectRatio: 1
+                  )
                 }
               }
             }

@@ -1,70 +1,62 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useState } from "react"
+import a11yKeyDown from "../../utilities/a11y-keydown";
 
-class Header extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      shown: false,
-    };
-  }
+const Header = () => {
+  const [shown, setShown] = useState(false);
+  const toggle = () => setShown(!shown);
 
-  toggle() {
-    this.setState({
-      shown: !this.state.shown
-    });
-  }
+  return (
+    <header>
+      <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="container">
+          <div className="navbar-brand">
+            <Link
+              className="navbar-item"
+              to="/"
+            >
+              > mk_
+            </Link>
 
-  render() {
-    return (
-      <header>
-        <nav className="navbar" role="navigation" aria-label="main navigation">
-          <div className="container">
-            <div className="navbar-brand">
-              <Link
-                className="navbar-item"
-                to="/"
-              >
-                > mk_
-              </Link>
+            <div onClick={() => { toggle() }}
+                 onKeyDown={a11yKeyDown(toggle)}
+                 role="button"
+                 className={shown ? "navbar-burger burger is-active" : "navbar-burger burger"}
+                 aria-label="menu"
+                 aria-expanded="false"
+                 tabIndex={0}
+            >
 
-              <div onClick={this.toggle.bind(this)}
-                   role="button"
-                   className={this.state.shown ? "navbar-burger burger is-active" : "navbar-burger burger"}
-                   aria-label="menu"
-                   aria-expanded="false">
-
-                <span aria-hidden="true"/>
-                <span aria-hidden="true"/>
-                <span aria-hidden="true"/>
-              </div>
-            </div>
-
-            <div className={this.state.shown ? "navbar-menu is-active" : "navbar-menu"}>
-              <Link
-                className="navbar-item"
-                to="/jobs"
-              >
-                Jobs
-              </Link>
-              <Link
-                className="navbar-item"
-                to="/projects"
-              >
-                Projects
-              </Link>
-              <Link
-                className="navbar-item"
-                to="/blog"
-              >
-                Blog
-              </Link>
+              <span aria-hidden="true"/>
+              <span aria-hidden="true"/>
+              <span aria-hidden="true"/>
             </div>
           </div>
-        </nav>
-      </header>
-    );
-  }
+
+          <div className={shown ? "navbar-menu is-active" : "navbar-menu"}>
+            <Link
+              className="navbar-item"
+              to="/jobs"
+            >
+              Jobs
+            </Link>
+            <Link
+              className="navbar-item"
+              to="/projects"
+            >
+              Projects
+            </Link>
+            <Link
+              className="navbar-item"
+              to="/blog"
+            >
+              Blog
+            </Link>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
 }
 
 export default Header

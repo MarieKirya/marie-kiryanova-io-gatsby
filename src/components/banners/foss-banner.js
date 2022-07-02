@@ -11,11 +11,11 @@ const FOSSBanner = () => (
       <div className={'columns'}>
         <div className={'column'}>
           <div className={'tech-icon tech-icon--gatsby'}><Icon path={mdiGatsby} color={'#EFEFEF'} /></div>
-          <div className={'buttons'}><a href={'https://github.com/mariekirya/marie-kiryanova-io-gatsby'} className="button button--cta"><span className="mdi mdi-github-circle"/> Source</a></div>
+          <div className={'buttons'}><a href={'https://github.com/mariekirya/marie-kiryanova-io-gatsby'} className="button button--cta"><span className="mdi mdi-github"/> Source</a></div>
         </div>
         <div className={'column'}>
           <div className={'tech-icon tech-icon--drupal'}><Icon path={mdiDrupal} color={'#EFEFEF'} /></div>
-          <div className={'buttons'}><a href={'https://github.com/mariekirya/marie-kiryanova-io-cms'} className="button button--cta"><span className="mdi mdi-github-circle"/> Source</a></div>
+          <div className={'buttons'}><a href={'https://github.com/mariekirya/marie-kiryanova-io-cms'} className="button button--cta"><span className="mdi mdi-github"/> Source</a></div>
         </div>
       </div>
     </div>

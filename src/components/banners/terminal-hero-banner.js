@@ -81,7 +81,7 @@ class TerminalHeroBanner extends React.Component {
             </div>
             <div className={"column column--ctas"}>
               <Link to={'/projects'} className="button button--cta"><span className="mdi mdi-source-branch"/> Projects</Link>
-              <a href={'https://github.com/mariekirya'} className="button button--cta"><span className="mdi mdi-github-circle"/> GitHub</a>
+              <a href={'https://github.com/mariekirya'} className="button button--cta"><span className="mdi mdi-github"/> GitHub</a>
             </div>
           </div>
         </div>

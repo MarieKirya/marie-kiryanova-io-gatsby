@@ -27,9 +27,9 @@ const blogQuery = graphql`
             field_hero_image {
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 1024, maxHeight: 576) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(
+                    layout: FULL_WIDTH
+                  )
                 }
               }
             }

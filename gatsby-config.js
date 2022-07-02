@@ -38,7 +38,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `https://cms.kiryanova.io/`,
+        baseUrl: `http://192.168.1.2:8083/`,
       },
     },
     {
@@ -52,7 +52,8 @@ module.exports = {
           `/easter-egg`
         ]
       }
-    }
+    },
+    `gatsby-plugin-postcss`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

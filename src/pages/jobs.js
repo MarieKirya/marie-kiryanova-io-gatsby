@@ -2,13 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout/layout"
-import SEO from "../components/utils/seo"
+import Seo from "../components/utils/seo"
 import Job from "../components/content/job"
 
 const JobsPage = ({data}) => (
   <Layout>
     <div className={"container"}>
-      <SEO title="Jobs" keywords={[`marie`, `kiryanova`, 'Jobs', `react`, `gatsby`, `drupal`, `portfolio`]} />
+      <Seo title="Jobs" keywords={[`marie`, `kiryanova`, 'Jobs', `react`, `gatsby`, `drupal`, `portfolio`]} />
       <h1 className="title">Jobs</h1>
       { data.allNodeJobs.edges.map((job, index) => ( <Job node={job.node} /> )) }
     </div>
@@ -37,9 +37,11 @@ export const query = graphql`
             field_logo {
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 512, maxHeight: 512) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    aspectRatio: 1
+                    width: 512
+                  )
                 }
               }
             }
@@ -60,9 +62,11 @@ export const query = graphql`
                 field_logo {
                   localFile {
                     childImageSharp {
-                      fluid(maxWidth: 512, maxHeight: 512) {
-                        ...GatsbyImageSharpFluid
-                      }
+                      gatsbyImageData(
+                        layout: CONSTRAINED
+                        aspectRatio: 1
+                        width: 512
+                      )
                     }
                   }
                 }

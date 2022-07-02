@@ -3,8 +3,8 @@ import React from "react"
 import ReactMarkdown from "react-markdown"
 
 import Layout from "../components/layout/layout"
-import Img from "gatsby-image";
-import SEO from "../components/utils/seo";
+import { GatsbyImage } from "gatsby-plugin-image"
+import Seo from "../components/utils/seo";
 
 const HeadingRenderer = (props) => {
   const flatten = (text, child) => {
@@ -21,7 +21,7 @@ const HeadingRenderer = (props) => {
 
 const BlogTemplate = ({ data }) => (
   <Layout>
-    <SEO title={data.nodeBlogPost.title} keywords={[`marie`, `kiryanova`, 'blog', `react`, `gatsby`, `drupal`, `portfolio`]} />
+    <Seo title={data.nodeBlogPost.title} keywords={[`marie`, `kiryanova`, 'blog', `react`, `gatsby`, `drupal`, `portfolio`]} />
 
     <div className={"container blog-post"}>
       <h1 className="title">{data.nodeBlogPost.title}</h1>
@@ -29,12 +29,21 @@ const BlogTemplate = ({ data }) => (
 
       <div className="card blog-hero">
         <div className={"card-image"}>
-          <Img fluid={data.nodeBlogPost.relationships.field_hero_image.localFile.childImageSharp.fluid}/>
+          <GatsbyImage image={data.nodeBlogPost.relationships.field_hero_image.localFile.childImageSharp.gatsbyImageData}/>
         </div>
       </div>
 
       <div class="content">
-        <ReactMarkdown source={data.nodeBlogPost.body.value} renderers={{heading: HeadingRenderer}} />
+        <ReactMarkdown components={{
+          h1: HeadingRenderer,
+          h2: HeadingRenderer,
+          h3: HeadingRenderer,
+          h4: HeadingRenderer,
+          h5: HeadingRenderer,
+          h6: HeadingRenderer,
+        }}>
+          {data.nodeBlogPost.body.value}
+        </ReactMarkdown>
       </div>
     </div>
   </Layout>
@@ -54,9 +63,9 @@ export const query = graphql`
         field_hero_image {
           localFile {
             childImageSharp {
-              fluid(maxWidth: 1280, maxHeight: 720) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(
+                layout: FULL_WIDTH
+              )
             }
           }
         }

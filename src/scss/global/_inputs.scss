@@ -18,6 +18,10 @@ textarea.textarea {
   }
 }
 
+.button {
+  height: 2.25em;
+}
+
 .button--cta {
   display: flex;
 
@@ -34,6 +38,7 @@ textarea.textarea {
 
   @media (min-width: $tablet) {
     margin: 0px 25%;
+    width: 50%;
   }
 
   transition: transform .2s;
@@ -44,6 +49,8 @@ textarea.textarea {
     color: $color-deep-blue;
     transform: scale(1.02);
   }
+
+  h1, h2, h3, h4, h5, h6 { margin-bottom: 0; }
 
   span.mdi {
     position: absolute;
