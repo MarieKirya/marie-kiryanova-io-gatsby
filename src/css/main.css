@@ -10450,6 +10450,10 @@ div.card {
   transition: transform 0.2s;
   transition-timing-function: ease;
 }
+div.card .card-image {
+  display: flex;
+  justify-content: center;
+}
 div.card .gatsby-image-wrapper {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
