@@ -34,8 +34,6 @@ const BlogTemplate = ({ data }) => {
       const attachmentIndex = parseInt(src.replace('attachment:', ''), 10) - 1;
       const attachments = data.nodeBlogPost.relationships.field_attachments;
 
-      console.log(attachments)
-
       return <GatsbyImage
         alt={alt}
         image={
